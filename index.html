@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earning Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<!-- <header class="main-header">
+  <div class="logo">📊 IncomeBoard</div>
+  <nav class="nav-links">
+    <a href="#incomeChart">Dashboard</a>
+    <a href="#manualEditor">Manual Entry</a>
+    <a href="#">Reports</a>
+  </nav>
+</header> -->
+
+  <div class="container">
+    <div class="header">
+      <div class="profile">
+        <img src="unnamed.jpg" alt="profile" />
+        <div class="profile-text">
+          <h2>Welcome Shafeek Khan S A!</h2>
+          <p>entrepreneurshafeek@gmail.com</p>
+        </div>
+      </div>
+      <a href="index2.html" class="join-btn" target="_blank">Affiliate Commissions</a>
+    </div>
+
+    <div class="cards">
+      <div class="card orange">
+        <label for="today">TODAY'S EARNING</label>
+        <input type="text" id="today" oninput="saveEarning('today')" />
+      </div>
+      <div class="card blue">
+        <label for="week">LAST 7 DAYS EARNING</label>
+        <input type="text" id="week" oninput="saveEarning('week')" />
+      </div>
+      <div class="card cyan">
+        <label for="month">LAST 30 DAYS EARNING</label>
+        <input type="text" id="month" oninput="saveEarning('month')" />
+      </div>
+      
+    </div>
+
+    <div class="graph-section">
+      <h2>Weekly Income Chart</h2>
+      <div class="chart-container">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="editor">
+        <h3>Earning Data</h3>
+        <div id="inputsContainer"></div>
+        <button onclick="updateChart()">Update Chart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
